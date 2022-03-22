@@ -1,0 +1,339 @@
+\newcommand{\sumario}{
+\begin{frame}[plain]
+   \frametitle{Plano de Aula}
+   \tableofcontents
+\end{frame}
+}
+
+
+\newcommand{\widebox}[1]{
+\makebox[\linewidth][c]{%
+\begin{minipage}{\paperwidth}
+	
+#1
+
+\end{minipage}%
+}%
+
+}
+
+
+\newcommand{\frameTitle}{
+\begin{frame}
+	\titlepage
+	 \begin{center}{}\end{center} 
+\end{frame}
+}
+
+\newcommand{\frameObjetivos}{
+\begin{frame}{}
+	\nblock{Objetivos}{
+		\objetivos
+	}
+\end{frame}
+}
+
+
+\newcommand{\frameTalkIsCheap}{
+\begin{frame}
+	% {Exercícios}
+
+	\addimage{template/images/talkischeap3}{0.65}{}
+
+	\begin{flushright}
+		Linus Torvalds
+	\end{flushright}
+\end{frame}		
+}
+
+\newcommand{\frameDuvidas}{
+\begin{frame}{Dúvidas?}
+	\addimage{template/images/questions.png}{0.65}{}
+	 	
+\end{frame}		
+}
+
+\newcommand{\addimage}[2]{
+  \begin{figure}[!h]
+  \centering
+  \includegraphics[width=#2\paperwidth]{#1}
+%  \caption{#3}
+%  \label{fig:#4}
+  \end{figure}
+}
+
+\newcommand{\addimagec}[3]{
+  \begin{figure}[!h]
+  \centering
+  \includegraphics[width=#2\paperwidth]{#1}
+  \caption{#3}
+%  \label{fig:#4}
+  \end{figure}
+}
+
+\newcommand{\addwimage}[2]{
+
+\makebox[\linewidth][c]{%
+\begin{minipage}{\paperwidth}
+	
+  \begin{figure}[!h]
+  \centering
+  \includegraphics[width=#2\paperwidth]{#1}
+%  \caption{#3}
+%  \label{fig:#4}
+  \end{figure}
+
+\end{minipage}%
+}%
+
+}
+
+\newcommand{\addwpdf}[2]{
+
+\begin{frame}{Pathfinding - A*}
+\makebox[\linewidth][c]{%
+\begin{minipage}{\paperwidth}
+  \vspace{1.1cm}
+  \begin{figure}[!h]
+  \centering
+  \includegraphics[width=\paperwidth, clip, page=#2]{#1}
+  \end{figure}
+
+\end{minipage}%
+}%
+\end{frame}
+
+}
+
+
+
+\newcommand{\addpdfpage}[5]{
+\begin{center}
+
+\includegraphics[trim={#1cm #2cm #1cm #2cm},clip,page=#3,width=#4\paperheight]{#5}
+
+\end{center}
+}
+%\newcommand{\addpdfpagew}[4]{
+%\includegraphics[trim={#1cm #2cm #1cm #2cm},clip,page=#4,width=0.8\paperwidth]{#3}
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\popc}[2]{
+\begin{block}{#1}
+	\pause	
+	#2
+\end{block}
+}
+
+\newcommand{\pop}[2]{
+\pause	
+\begin{block}{#1}
+	#2
+\end{block}
+}
+
+\newcommand{\nblock}[2]{
+\begin{block}{#1}
+	#2
+\end{block}
+}
+
+\newcommand{\eblock}[2]{
+\begin{exampleblock}{#1}
+	#2
+\end{exampleblock}
+}
+
+\newcommand{\ablock}[2]{
+\begin{alertblock}{#1}
+	#2
+\end{alertblock}
+}
+
+
+\newcommand{\tcblock}[2]{
+\begin{tcolorbox}[beamer,title=#1]
+#2
+\end{tcolorbox}
+}
+
+\newcommand{\tcblockh}[3]{
+\begin{tcolorbox}[beamer,title=#1,height=#2]
+#3
+\end{tcolorbox}
+}
+
+%\begin{tcolorbox}[beamer,title=tcolorbox,height=4cm, width=5cm]
+%Some text
+%\end{tcolorbox}
+
+
+
+% Uma macro que cria \newenvironments
+\newcommand{\coloredblock}[3]{
+	\newenvironment{#1}[1]
+	{
+		\setbeamercolor{block title}{fg=white,bg=#2!75!black}%
+		\begin{block}{#3}
+	}
+	{
+		\end{block}
+	}	
+}
+
+% Criaçao de \newenvironments
+\coloredblock{blackblockenv}{black}{#1}
+\coloredblock{blueblockenv}{blue}{#1}
+\coloredblock{redblockenv}{red}{#1}
+
+% Macro para chamar as \newenvironments criadas
+\newcommand{\blackblock}[2]{
+	\begin{blackblockenv}{#1}
+		#2
+	\end{blackblockenv}
+}
+\newcommand{\redblock}[2]{
+	\begin{redblockenv}{#1}
+		#2
+	\end{redblockenv}
+}
+\newcommand{\blueblock}[2]{
+	\begin{blueblockenv}{#1}
+		#2
+	\end{blueblockenv}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%
+%\newenvironment{wideframe}
+%{
+%\begin{frame}{TESTE}%
+%\makebox[\linewidth][c]{%
+%\begin{minipage}{\paperwidth}%
+%}{
+%\end{minipage}%
+%}%
+%\end{frame}
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% WideFrame %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\NewEnviron{wframe}[1]{
+
+\begin{frame}{#1}
+\makebox[\linewidth][c]{%
+\begin{minipage}{\paperwidth}
+	
+\BODY
+
+\end{minipage}%
+}%
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%% WideBox %%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+\NewEnviron{wbox}{
+
+\makebox[\linewidth][c]{%
+\begin{minipage}{\paperwidth}
+	
+\BODY
+
+\end{minipage}%
+}%
+}
+
+
+
+
+
+
+
+%\newcommand{\coloredblock}[3]{
+%	\setbeamercolor{block title}{fg=white,bg=#1!75!black}%
+%	\begin{block}{#2}
+%		#3
+%	\end{block}
+%}
+%
+%\newcommand{\redblock}[2]{
+%	\coloredblock{red}{#1}{#2}
+%}
+%
+%\newcommand{\yblock}[2]{
+%	\setbeamercolor{block title}{fg=white,bg=yellow!75!black}%
+%	\begin{block}{#1}
+%		#2
+%	\end{block}
+%}
+
+
+
+%\newenvironment<>{myblock}[1]
+%{%
+%	\setbeamercolor{block title}{fg=white,bg=red!75!black}%
+%	\begin{block}#2{#1}
+%}
+%{
+%	\end{block}
+%}
+%  
+%
+%
+%\newenvironment{blueblock}[1]
+%{
+%	\setbeamercolor{block title}{fg=white,bg=blue!75!black}%
+%	\begin{block}{#1}
+%}
+%{
+%	\end{block}
+%}
+%
+%
+%
+%
+%\newcommand{\mblock}[2]{
+%\begin{block}{#1}
+%	#2
+%\end{block}
+%}
+
+%
+%
+%% Uma macro que cria \newenvironments
+%\newcommand{\coloredblock}[3]{
+%
+%	\newenvironment{#1}[1]
+%	{
+%		\setbeamercolor{block title}{fg=white,bg=#2!75!black}%
+%		\begin{block}{#3}
+%	}
+%	{
+%		\end{block}
+%	}
+%	
+%}
+%
+%% Criaçao de \newenvironment 
+%\coloredblock{preto}{black}{#1}
+%
+%% Macro para chamar as \newenvironment criadas
+%\newcommand{\blackblock}[2]{
+%	\begin{preto}{#1}
+%		#2
+%	\end{preto}
+%}

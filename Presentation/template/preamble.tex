@@ -1,0 +1,75 @@
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx,epsfig}
+\usepackage{textpos} 
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{environ}% http://ctan.org/pkg/environ
+
+
+\newcommand{\logoFACENS}{template/images/logoFACENS.jpg}
+\newcommand{\logoSMALL}{template/images/logo-facens-small.png}
+\newcommand{\screnshotsizeI}{0.65}
+\newcommand{\screnshotsizeII}{0.85}
+\newcommand{\screnshotsizeIII}{0.99}
+
+
+
+%\setbeamertemplate{headline}{%
+%\leavevmode%
+%  \hbox{%
+%    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+%    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+%    \end{beamercolorbox}%
+%  }
+
+%}
+
+\addtobeamertemplate{frametitle}{}{%
+	
+	\small{
+	
+    \begin{textblock*}{\textwidth}(0cm,0.1cm)
+		%\insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+%		\textcolor{gray}{\insertsectionhead\insertsubsectionhead}
+		 
+		
+		%\insertsection \insertsubsection
+    \end{textblock*}
+	}
+    
+    \begin{textblock*}{100mm}(1.02\textwidth,-0.67cm)
+        \includegraphics[width=0.06\textwidth]{\logoSMALL}
+    \end{textblock*}
+}
+
+
+\institute[]{
+  %\inst{1}
+  \includegraphics[width=0.28\textwidth]{\logoFACENS}
+} 
+
+\setbeamercovered{transparent} 
+\setbeamertemplate{navigation symbols}{} 
+\setbeamercovered{invisible}
+
+% Define o caminho das figuras
+\graphicspath{{conteudo/images/}}
+
+\AtBeginSection[] 
+{
+    \begin{frame}
+	    \frametitle{Plano de Aula}
+	    \tableofcontents[currentsection]
+    \end{frame}
+}
+
+
+%https://bloerg.net/2012/06/21/customizing-the-frametitle-of-beamer-presentation.html
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,646 @@
+
+
+% \footnotesize
+% \tiny
+
+
+\section{Álgebra booleana}
+
+
+
+\begin{frame}{Álgebra booleana} 
+
+	\begin{itemize}
+		\item A \textbf{Álgebra booleana} pode ser entendida como um conjunto de proposições e operadores lógicos.
+	\end{itemize}
+
+	\begin{itemize}
+		\item Foi proposta por \textit{George Boole} em 1854 e até hoje é utilizada para trabalhar com valores \textbf{lógicos} e suas operações. 
+	\end{itemize}
+
+	
+\end{frame}
+
+\begin{frame}{Álgebra booleana} 
+
+	\begin{itemize}
+		\item Na Algebra booleana cada variável terá um, e \textit{somente um}, entre dois valores, que podem ser representados por [\textbf{F},\textbf{V}]; [\textbf{0},\textbf{1}], [\textbf{aberto}, \textbf{fechado}]; [\textbf{baixo}, \textbf{alto}].
+	\end{itemize}
+
+	\begin{itemize}
+		\item Em 1938, \textit{Claude Elwood Shannon} utilizou o formalismo de \textit{Boole} em circuitos elétricos e mostrou que estes podem ser representados por uma álgebra que assume dois valores distintos, \textbf{0} e \textbf{1}.
+	\end{itemize}
+
+	\begin{itemize}
+		\item Aqui utilizaremos a notação [\textbf{0},\textbf{1}] por ser a mais próxima da computação.
+	\end{itemize}
+\end{frame}
+
+
+
+
+% \begin{frame}{Variáveis booleanas} 
+	
+% \end{frame}
+
+
+\begin{frame}{Operações Básicas da Algebra Booleana} 
+
+	% Um operador lógico é uma simbologia utilizada para representar um operação lógica.
+	% Nesta disciplina estudaremos os principais operadores lógicos:
+	Além dos valores lógicos, a algebra booleana formaliza as operações que atuam sobre esses valores. Entre os principais deles estão:
+
+	\vspace{1cm}
+	\begin{itemize}
+		\item \textbf{OR} (Adição Lógica)
+		\item \textbf{AND} (Multiplicação Lógica)
+		\item \textbf{NOT} (Complemento)
+		\item \textbf{XOR} (OR exclusivo)
+	\end{itemize}
+
+	
+
+\end{frame}
+
+\subsection{OR}
+
+
+\begin{frame}{OR (Adição Lógica)} 
+
+	Considere que você vai decidir se vai ou não à faculdade. Seu critério para decidir é: Vou se tiver aula \textbf{ou} gincana.
+
+	Observe as afirmações:
+
+	\vspace{0.2cm}
+	\begin{itemize}
+		\item Tem aula.
+		\item Tem gincana.
+	\end{itemize}
+
+	Se listarmos todas as possibilidades temos:
+
+		\center 
+		\vspace{0.4cm}
+
+		\begin{tabular}{|c|c|l|} \hline 
+			\textbf{Aula} & \textbf{Gincana} & \textbf{ Significado } \\ \hline 
+			F & F & Nem aula nem gincana \\ \hline 
+			F & V & Sem aula, mas tem gincana \\ \hline 
+			V & F & Tem aula, mas não gincana \\ \hline 
+			V & V & Tem ambas \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+
+\begin{frame}{OR (Adição Lógica)} 
+
+	Considere que você vai decidir se vai ou não à faculdade. Seu critério para decidir é: Vou se tiver aula \textbf{ou} gincana.
+
+	Observe as afirmações:
+
+	\vspace{0.2cm}
+	\begin{itemize}
+		\item Tem aula.
+		\item Tem gincana.
+	\end{itemize}
+
+	Se listarmos todas as possibilidades temos:
+
+		\center 
+		\vspace{0.4cm}
+
+		\begin{tabular}{|c|c|c|} \hline 
+			\textbf{Aula} & \textbf{Gincana} & \textbf{Vou pra Faculdade} \\ \hline 
+			F & F & F \\ \hline 
+			F & V & V \\ \hline 
+			V & F & V \\ \hline 
+			V & V & V \\ \hline 
+		\end{tabular} 
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{OR (Adição Lógica)} 
+	
+	\nblock{}{
+	\begin{itemize}
+		\item O operador lógico \textbf{OR} atua sobre dois argumentos e resulta \textbf{1} se pelo um dos argumento for \textbf{1}.
+	\end{itemize}
+	
+	\begin{itemize}
+		\item Podemos também entender que somente retorna \textbf{0} se ambos forem \textbf{0}.
+	\end{itemize}
+
+	\begin{itemize}
+		\item Utilizamos o símbolo $\vee$ para representar a operação lógica \textbf{OR}.
+	\end{itemize}
+	}
+
+	% \nblock{}{ 
+	Se listarmos todas as possibilidades para duas variáveis A e B e as combinarmos usando o operador \textbf{OR}, temos:
+
+		\center 
+		\begin{tabular}{|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{A $\vee$ B} \\ \hline 
+			0 & 0 & 0 \\ \hline 
+			0 & 1 & 1 \\ \hline 
+			1 & 0 & 1 \\ \hline 
+			1 & 1 & 1 \\ \hline 
+		\end{tabular} 
+
+	% }
+
+\end{frame}
+
+
+\begin{frame}{OR (Adição Lógica)} 
+	
+
+	% \nblock{}{ 
+	Para três variáveis \textbf{A}, \textbf{B} e \textbf{C}, temos:
+	\center
+		
+		\begin{tabular}{|c|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{C} & \textbf{A $\vee$ B $\vee$ C} \\ \hline 
+			0 & 0 & 0      & 0 \\ \hline 
+			0 & 0 & 1      & 1 \\ \hline 
+			0 & 1 & 0      & 1 \\ \hline 
+			0 & 1 & 1      & 1 \\ \hline 
+			1 & 0 & 0      & 1 \\ \hline 
+			1 & 0 & 1      & 1 \\ \hline 
+			1 & 1 & 0      & 1 \\ \hline 
+			1 & 1 & 1      & 1 \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+
+\subsection{AND}
+
+\begin{frame}{And (Multiplicação Lógica))} 
+
+	Um algoritmo que valida um login. O login é válido se: O usuário estiver correto \textbf{e} a senha estiver correta.
+
+	Observe as afirmações:
+
+	\vspace{0.2cm}
+	\begin{itemize}
+		\item Usuário correto.
+		\item Senha correta.
+	\end{itemize}
+
+	Se listarmos todas as possibilidades temos:
+
+		\center 
+		\vspace{0.4cm}
+
+		\begin{tabular}{|c|c|l|} \hline 
+			\textbf{Usuário} & \textbf{Senha} & \textbf{ Significado } \\ \hline 
+			F & F & Nem usuário nem senha \\ \hline 
+			F & V & Senha OK, mas usuário não \\ \hline 
+			V & F & Usuário OK, mas senha não \\ \hline
+			V & V & Ambos OK \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+
+\begin{frame}{And (Multiplicação Lógica))} 
+
+	Um algoritmo que valida um login. O login é válido se: O usuário estiver correto \textbf{e} a senha estiver correta.
+
+	Observe as afirmações:
+
+	\vspace{0.2cm}
+	\begin{itemize}
+		\item Usuário correto.
+		\item Senha correta.
+	\end{itemize}
+
+	Se listarmos todas as possibilidades temos:
+
+		\center 
+		\vspace{0.4cm}
+
+		\begin{tabular}{|c|c|c|} \hline 
+			\textbf{Usuário} & \textbf{Senha} & \textbf{Login é válido} \\ \hline 
+			F & F & F \\ \hline 
+			F & V & F \\ \hline 
+			V & F & F \\ \hline 
+			V & V & V \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+
+
+\begin{frame}{And (Multiplicação Lógica)} 
+	\nblock{}{
+	\begin{itemize}
+		\item O operador lógico \textbf{AND} recebe dois argumentos e resulta em \textbf{1} se ambos forem \textbf{1}.
+	\end{itemize}
+	
+	\begin{itemize}
+		\item Podemos também entender que, se pelo menos um argumento for \textbf{0},  retornará \textbf{0}.
+	\end{itemize}
+
+	\begin{itemize}
+		\item O símbolo utilizado para esse operador é $\wedge$
+	\end{itemize}
+	}
+	
+
+	% \nblock{}{ 
+	Considerando duas variáveis \textbf{A} e \textbf{B} e as combinarmos todas suas possibilidades usando o operador \textbf{AND}, temos:
+	\center
+		
+		\begin{tabular}{|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{A $\wedge$ B} \\ \hline 
+			0 & 0 & 0 \\ \hline 
+			0 & 1 & 0 \\ \hline 
+			1 & 0 & 0 \\ \hline 
+			1 & 1 & 1 \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+
+\begin{frame}{And (Multiplicação Lógica)} 
+
+	% \nblock{}{ 
+	Para três variáveis \textbf{A}, \textbf{B} e \textbf{C}, temos:
+	\center
+		
+		\begin{tabular}{|c|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{C} & \textbf{A $\wedge$ B $\wedge$ C} \\ \hline 
+			0 & 0 & 0      & 0 \\ \hline 
+			0 & 0 & 1      & 0 \\ \hline 
+			0 & 1 & 0      & 0 \\ \hline 
+			0 & 1 & 1      & 0 \\ \hline 
+			1 & 0 & 0      & 0 \\ \hline 
+			1 & 0 & 1      & 0 \\ \hline 
+			1 & 1 & 0      & 0 \\ \hline 
+			1 & 1 & 1      & 1 \\ \hline 
+		\end{tabular} 
+
+
+\end{frame}
+
+\subsection{NOT}
+
+
+\begin{frame}{NOT (Complemento)} 
+	
+	\nblock{}{
+	\begin{itemize}
+		\item O Operador \textbf{NOT}, também chamado de \textit{Negação} ou \textit{Inversão}, recebe apenas um operador e dá como resultado seu valor \textbf{oposto}. Ou seja, quando recebe \textbf{0} retorna \textbf{1} e quando recebe \textbf{1} retorna \textbf{0}.
+	\end{itemize}
+
+	\begin{itemize}
+		\item Utilizamos o símbolo $\sim$ para representar o operador \textbf{NOT}. Por exemplo, $\sim$A (Lê-se \textit{Não} \textbf{A} ou \textbf{A} \textit{negado})
+	\end{itemize}
+	}
+
+		Há somente duas possibilidades a observar, uma vez que recebe um único argumento lógico: 
+	
+		\center
+		\begin{tabular}{|c|c|} \hline 
+			\textbf{A} & \textbf{$\sim$A} \\ \hline 
+			0 & 1 \\ \hline 
+			1 & 0 \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+
+
+\subsection{XOR}
+
+\begin{frame}{Xor} 
+	Um aluno é avaliado por meio de uma prova e uma lista de exercicios. Será aprovado se tiver nota suficiente em ambas as notas e reprovado caso seja reprovado em ambas. Contudo, se tiver apenas uma nota insuficente, poderá fazer um trabalho para compensar.
+
+	Observe as afirmações:
+
+	\vspace{0.2cm}
+	\begin{itemize}
+		\item Nota boa na prova
+		\item Nota boa na lista
+	\end{itemize}
+
+	Se listarmos todas as possibilidades temos:
+
+		\center 
+		\vspace{0.4cm}
+
+		\begin{tabular}{|c|c|l|} \hline 
+			\textbf{Prova} & \textbf{Lista} & \textbf{ Significado } \\ \hline 
+			F & F & \textbf{Sem} notas boas \\ \hline 
+			F & V & Nota boa na \textbf{lista} \\ \hline 
+			V & F & Nota boa na \textbf{prova} \\ \hline
+			V & V & Nota boa em \textbf{ambas} \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+
+\begin{frame}{Xor} 
+	Um aluno é avaliado por meio de uma prova e uma lista de exercicios. Será aprovado se tiver nota suficiente em ambas as notas e reprovado caso seja reprovado em ambas. Contudo, se tiver apenas uma nota insuficente, poderá fazer um trabalho para compensar.
+
+	Observe as afirmações:
+
+	\vspace{0.2cm}
+	\begin{itemize}
+		\item Nota boa na prova
+		\item Nota boa na lista
+	\end{itemize}
+
+	Se listarmos todas as possibilidades temos:
+
+		\center 
+		\vspace{0.4cm}
+
+		\begin{tabular}{|c|c|c|} \hline 
+			\textbf{Prova} & \textbf{Lista} & \textbf{ Vai fazer trabalho } \\ \hline 
+			F & F & F \\ \hline 
+			F & V & V \\ \hline 
+			V & F & V \\ \hline
+			V & V & F \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+
+
+\begin{frame}{Xor} 
+	\nblock{}{
+	\begin{itemize}
+		\item O operador \textbf{XOR}, recebe dois argumentos e retorna \textbf{1} se somente um argumento for \textbf{1}. Retornará \textbf{0} se ambos forem \textbf{1} ou se ambos forem \textbf{0}.
+	\end{itemize}
+
+	\begin{itemize}
+		\item Em outras palavras retorna 1 se os argumentos forem diferentes.
+	\end{itemize}
+
+	\begin{itemize}
+		\item O símbolo que representa o operador XOR é $\oplus$.
+	\end{itemize}
+	}
+
+	Se listarmos todas as possibilidades para duas variáveis A e B e as combinarmos usando o operador $\oplus$, temos:
+		\center 
+		\begin{tabular}{|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{A $\oplus$ B} \\ \hline 
+			0 & 0 & 0 \\ \hline 
+			0 & 1 & 1 \\ \hline 
+			1 & 0 & 1 \\ \hline 
+			1 & 1 & 0 \\ \hline 
+		\end{tabular} 
+
+\end{frame}
+
+\begin{frame}{Teste} 
+	\begin{itemize}
+		\item Se A $\vee$ B $\vee$ C $\vee$ D = 0, qual o valor de A $\wedge$ C ?
+		\item Se A=1, B=0, C=1, qual o valor de A$\wedge$B$\vee$C ?
+		\item Se A=1, B=0, qual o valor de $\sim$(A$\wedge$B) ?
+		\item Se A $\wedge$ B $\wedge$ C $\wedge$ D = 0, qual o valor de A $\vee$ C ?
+	\end{itemize}
+
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Tabela Veradade}
+
+
+
+\begin{frame}{Tabela Verdade}
+	\begin{itemize}
+		\item Uma \textbf{Tabela Verdade} descreve uma \textbf{expressão booleana}. Nela são listadas todas as combinações de valores que as \textbf{variáveis de entrada} podem assumir, bem como seus \textbf{valores resultantes}.
+	\end{itemize}
+
+Exemplo:
+		
+		\begin{center}
+		\begin{tabular}{|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{A $\vee$ B} \\ \hline 
+			0 & 0 & 0 \\ \hline 
+			0 & 1 & 1 \\ \hline 
+			1 & 0 & 1 \\ \hline 
+			1 & 1 & 1 \\ \hline 
+		\end{tabular} 
+		\end{center}
+
+		Nesse exemplo as variáveis de entrada são \textbf{A} e \textbf{B} e a expressão booleana a ser descrita é \textbf{A} $\vee$ \textbf{B}.
+
+% Devido a este fato, uma tabela que descreva uma função Booleana recebe o nome de tabela verdade, e nela são listadas todas as combinações de valores que as variáveis de entrada podem assumir e os correspondentes valores da função (saídas).
+
+\end{frame}
+
+\subsection{Ordem de Precedência}
+
+
+\begin{frame}{Tabela Verdade}
+
+	\begin{itemize}
+		\item Em expressões compostas por mais de 2 operadores, devemos respeitar uma ordem de precedência.
+	\end{itemize}
+	\vspace{1cm}
+A ordem de precedência dos operadores é: 
+
+\begin{enumerate}
+	\item Parênteses;
+	\item NOT;
+	\item AND;
+	\item OR;
+	\item XOR;
+\end{enumerate}
+
+\end{frame}
+
+% a ordem de precedencia dos operadores segue a mesma ordem da algebra dos reais, ou seja a multiplicação tem precedência sobre a adição. Caso haja parênteses, esses tem precedência maior. 
+
+\subsection{Procedimento para montar a tabela verdade}
+
+
+\begin{frame}{Tabela Verdade}
+
+	\begin{itemize}
+		\item O número de \textbf{combinações} que as variáveis de entrada podem assumir é dado por: $2^n$, onde $n$ é o número de variáveis de entrada.
+	\end{itemize}
+
+	Exemplo:
+
+	A expressão A $\vee$ B $\wedge$ $\sim$C tem $2^3=8$ combinações.
+\end{frame}
+
+\begin{frame}{Tabela Verdade}
+O procedimento para criar uma tabela verdade a partir de uma expressão é:
+
+\begin{enumerate}
+	\item Criar uma coluna para cada variável de entrada.
+	% \item Criar uma coluna para os resultados de cada operador.
+	\item Criar uma coluna para o resultado final da expressão.
+		% \item Criar uma coluna para os resultados de cada operador.
+	\item Listar todas as combinações para as variáveis de entrada. 
+	\item Avaliar cada combinação respeitando a ordem de precedência de cada operador.
+\end{enumerate}
+
+\end{frame}
+
+
+
+\begin{frame}{Tabela Verdade}
+
+	A expressão A $\wedge$ B $\vee$ C resulta na seguinte tabela verdade:
+
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{C} & \textbf{A $\wedge$ B $\vee$ C} \\ \hline 
+			0 & 0 & 0 & 0 \\ \hline 
+			0 & 0 & 1 & 1 \\ \hline 
+			0 & 1 & 0 & 0 \\ \hline 
+			0 & 1 & 1 & 1 \\ \hline 
+			1 & 0 & 0 & 0 \\ \hline 
+			1 & 0 & 1 & 1 \\ \hline 
+			1 & 1 & 0 & 1 \\ \hline 
+			1 & 1 & 1 & 1 \\ \hline 
+		\end{tabular} 
+		\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Tabela Verdade}
+
+\nblock{}{
+Caso necessário, crie colunas para resultados intermediários, começando pela precedência maior.
+}
+
+
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{C} & 
+			\textbf{A $\wedge$ B} &
+			\textbf{(A $\wedge$ B) $\vee$ C} \\ \hline 
+			0 & 0 & 0 & 0 & 0 \\ \hline 
+			0 & 0 & 1 & 0 & 1 \\ \hline 
+			0 & 1 & 0 & 0 & 0 \\ \hline 
+			0 & 1 & 1 & 0 & 1 \\ \hline 
+			1 & 0 & 0 & 0 & 0 \\ \hline 
+			1 & 0 & 1 & 0 & 1 \\ \hline 
+			1 & 1 & 0 & 1 & 1 \\ \hline 
+			1 & 1 & 1 & 1 & 1 \\ \hline 
+		\end{tabular} 
+		\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Tabela Verdade}
+
+Tomando novamente a expressão A $\vee$ B $\wedge$ $\sim$C temos a seguinte tabela verdade:
+
+		\begin{center}
+		\begin{tabular}{|c|c|c|c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{C} & \textbf{A $\vee$ B $\wedge$ $\sim$C} \\ \hline 
+			0 & 0 & 1 & 0 \\ \hline 
+			0 & 0 & 0 & 0 \\ \hline 
+			0 & 1 & 1 & 0 \\ \hline 
+			0 & 1 & 0 & 1 \\ \hline 
+			1 & 0 & 1 & 1 \\ \hline 
+			1 & 0 & 0 & 1 \\ \hline 
+			1 & 1 & 1 & 1 \\ \hline 
+			1 & 1 & 0 & 1 \\ \hline 
+		\end{tabular} 
+		\end{center}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Tabela Verdade}
+
+\nblock{}{
+Caso necessário, crie colunas para resultados intermediários, começando pela precedência maior.
+}
+
+		\begin{center}
+		\begin{tabular}{|c|c|c||c||c||c|} \hline 
+			\textbf{A} & \textbf{B} & \textbf{C} & 
+			\textbf{$\sim$C} &
+			\textbf{B $\wedge$ $\sim$C } &
+			\textbf{A $\vee$ (B $\wedge$ $\sim$C)}
+			\\ \hline 
+			0 & 0 & 0 & 1 & 0 & 0 \\ \hline 
+			0 & 0 & 1 & 0 & 0 & 0 \\ \hline 
+			0 & 1 & 0 & 1 & 1 & 1 \\ \hline 
+			0 & 1 & 1 & 0 & 0 & 0 \\ \hline 
+			1 & 0 & 0 & 1 & 0 & 1 \\ \hline 
+			1 & 0 & 1 & 0 & 0 & 1 \\ \hline 
+			1 & 1 & 0 & 1 & 1 & 1 \\ \hline 
+			1 & 1 & 1 & 0 & 0 & 1 \\ \hline 
+		\end{tabular} 
+		\end{center}
+
+\end{frame}
+
+
+
+
+
+
+
+% O número de combinações que as variáveis de entrada podem assumir pode ser
+% calculado por 2n, onde n é o número de variáveis de entrada.
+% O procedimento para a criação da tabela verdade a partir de uma equação Booleana é:
+% 1. Criar colunas para as variáveis de entrada e listar todas as combinações
+% possíveis, utilizando a fórmula n o de combinações = 2n (onde n é o
+% número de variáveis de entrada);
+% 2. Criar uma coluna para cada variável de entrada que apareça
+% complementada na equação e anotar os valores resultantes;
+% 3. Avaliar a equação seguindo a ordem de precedência, a partir do nível de
+% parêntesis mais internos:
+% 1 o multiplicação lógica
+% 2 o adição lógica
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \begin{frame}{} 
+	
+% \end{frame}
